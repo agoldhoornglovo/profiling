@@ -33,12 +33,12 @@ class TracingStatisticsTable(StatisticsTable):
 
     columns = [
         ('FUNCTION', 'left', ('weight', 1), sortkeys.by_function),
-        ('CALLS', 'right', (6,), sortkeys.by_own_hits),
-        ('OWN', 'right', (6,), sortkeys.by_own_time),
-        ('/CALL', 'right', (6,), sortkeys.by_own_time_per_call),
+        ('CALLS', 'right', (10,), sortkeys.by_own_hits),
+        ('OWN', 'right', (10,), sortkeys.by_own_time),
+        ('/CALL', 'right', (10,), sortkeys.by_own_time_per_call),
         ('%', 'left', (4,), None),
-        ('DEEP', 'right', (6,), sortkeys.by_deep_time),
-        ('/CALL', 'right', (6,), sortkeys.by_deep_time_per_call),
+        ('DEEP', 'right', (10,), sortkeys.by_deep_time),
+        ('/CALL', 'right', (10,), sortkeys.by_deep_time_per_call),
         ('%', 'left', (4,), None),
     ]
     order = sortkeys.by_deep_time
